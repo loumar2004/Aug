@@ -1,0 +1,160 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <style>
+        body{background-color: rgb(40, 23, 56);}
+    </style>
+
+<script>
+  function onLoadMethod() {
+      var imageLoad = new Image();
+  
+      imageLoad.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Sunflower_from_Silesia2.jpg/800px-Sunflower_from_Silesia2.jpg"
+      imageLoad.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Saturn_during_Equinox.jpg/800px-Saturn_during_Equinox.jpg"
+      changeImage();
+  }
+  function changeImage() {
+      var imageSrcArray = [
+                          'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Sunflower_from_Silesia2.jpg/800px-Sunflower_from_Silesia2.jpg',
+                          'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Saturn_during_Equinox.jpg/800px-Saturn_during_Equinox.jpg'];
+      var i = 0
+      var j = 10;
+      while (j > 0 ) {
+          setTimeout(changeDisplayedImage, 5000, imageSrcArray[i]);
+          i++;
+          if (i >= imageSrcArray.length )
+              i = 0;
+          j--;
+      }
+  }
+  function changeDisplayedImage(imageSrc) {
+      document.getElementById('image1').src = imageSrc
+      console.log(document.getElementById('image1').src)
+  }
+</script>
+
+<script>
+  var mycookies = [];
+     function setCookie()
+     {
+         mycookies["uname"] = document.getElementById("name").value;
+         mycookies["uage"] = document.getElementById("age").value;
+         document.cookie = "";
+         var cookieString = ""; 
+         for(var key in mycookies)
+             {
+                 cookieString = key + "="+ mycookies[key] ;
+                 document.cookie = cookieString; 
+             }
+         document.getElementById("nameOutput").innerHTML = cookieString;
+     }
+     
+     function readCookie()
+     {
+         mycookies = [];
+        var keyvalue = document.cookie.split(";");
+        for (var id in keyvalue)
+             {
+                 var cookie = keyvalue[id].split("=");
+                 mycookies[cookie[0].trim()]=cookie[1];
+             }
+         document.getElementById("nameOutput").value = mycookies["uname"];
+         document.getElementById("nameOutput1").value = mycookies["uage"];
+         
+     }
+ </script>
+
+function display() {
+			
+			
+  var url = window.location.href
+  url += '?name=ABCD&location=USA&year=2019'
+  document.getElementById('keyValue').innerHTML= url
+  
+  var key=[]
+  var value=[]
+  var string1= url.split('?')[1].split('&')		
+  
+  for(var i of string1)
+    {
+      var x=i.split('=')
+      key.push(x[0])
+      value.push(x[1])
+    }
+  var counter=key.length
+  var displayString=''
+  
+  for( var i=0; i<counter; i++ )
+    {
+      displayString+=key[i]+':'+value[i]+ '<br />'
+    }
+  document.getElementById('displayKey').innerHTML= displayString
+}
+
+</script>
+
+
+
+
+</head>
+<body onload="onLoadMethod()">
+  <img alt="Image 1" 
+       id="image1"/>
+
+       <body onload='display()'>
+		
+        <h3>Key Value pairs: </h3>
+        <br />
+        <div id='keyValue'></div>
+        <br />
+        <div id='displayKey'></div>
+
+<nav>
+
+    <div class="topnav">
+        <a class="active" href="index.html">HOME</a>
+        <a href="INTEREST.HTML">INTEREST</a>
+        <a href="CONTACTME.HTML">CONTACT </a>
+        <a href="GALERY.HTML">GALERY</a>
+    </div>
+</nav>
+
+    <hr>
+
+   <h1> WE HAVE DIFFERENT TYPE OF FOOD BASED OF YOUR TATSE </h1> 
+
+   <audio controls autoplay>
+    <source src="horse.ogg" type="audio/ogg">
+    <source src="audio/10 sec 2D Test animation.mp3" type="audio/mpeg">
+  </audio>
+
+  
+  <video width="220" height="220" autoplay muted>
+    <source src="video/10 sec 2D Test animation.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+  </video>
+
+  <div class="gallery">
+    <a target="_blank" href="img_5terre.jpg">
+      <img src="images/food2.png" alt="Cinque Terre">
+    </a>
+    <div class="desc">LUNCH</div>
+
+    <div class="gallery">
+        <a target="_blank" href="img_5terre.jpg">
+          <img src="images/food3.png" alt="Cinque Terre">
+        </a>
+        <div class="desc">DINNER</div>
+      
+
+</div>
+
+  
+
+
+
+</body>
+</html>

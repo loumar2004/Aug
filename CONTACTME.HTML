@@ -1,0 +1,178 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <style>
+        body{background-color: rgb(71, 31, 31);  }
+        table{color: rgb(151, 1, 1);}
+        table,th,td {
+          border: 1px solid rgb(0, 0, 0);
+          }
+            table{
+                  
+            border-collapse: collapse;
+                    background-color: lightcyan;
+          }
+            th{
+          height: 100px;
+          width: 200px;
+          
+          }
+           td{
+          text-align: center;
+          }
+
+    </style>
+
+
+<script>
+    
+
+    function validatetextinputbox (form) 
+{
+    var a = form.inputbox.value;
+    alert ("You typed: " + a);
+    
+}
+    
+function validateSelect(form)
+{
+    var b = document.getElementById("select1").value;
+        if( b == "")            
+            {
+                alert("Please make a selection");
+                return false;
+            }
+       alert ("You choose:" + b);
+}
+
+    
+
+function validateRadiobutton (form)
+{
+    for (Count = 0; Count < 2; Count++) 
+    {
+        if (form.rad[Count].checked)
+            break;
+    }
+    alert ("You selected"+form.rad.value);
+    
+}
+
+    
+
+function validateCheckBox (form)
+{
+    var c= document.getElementsByName("check");
+    var count=0;
+    for (var i=0; i<c.length; i++) 
+    {       
+           if (c[i].type == "checkbox" && c[i].checked == true)
+           {
+              count++;
+           } 
+        
+}
+    alert("No:of optipns selected: "+count);
+}
+    
+
+function myText (form) 
+{
+  var x = document.getElementById("myTextarea").value;
+  alert ("You typed:"+x);
+ 
+}
+
+</script>
+    
+    </head>
+    
+    <body>
+        
+    <FORM NAME="myform" ACTION="" METHOD="GET">
+
+Name: <INPUT TYPE="text" NAME="inputbox" VALUE=""> &nbsp;
+<INPUT TYPE="button" NAME="button" Value="Click" onClick="validatetextinputbox(this.form)"><BR><BR>&nbsp;
+ 
+Age :
+<select id="select1">
+<option value="">Choose your age:</option>
+<option value="less than 18"> less than 18</option>
+<option value="18-25"> 18-25</option>
+<option value="25-30"> 25-30</option>
+<option value="30 above"> 30 above</option>
+</select> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<INPUT TYPE="button" NAME="button" Value="Click" onClick="validateSelect(this.form)"> <BR><br>
+
+Sex :   
+<INPUT TYPE="radio" NAME="rad" Value="Male" onClick=0>Male
+<INPUT TYPE="radio" NAME="rad" Value="Female" onClick=0>Female
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+<INPUT TYPE="button" NAME="button" Value="Click" onClick="validateRadiobutton(this.form)"> <BR>
+
+Favourite color:<BR>
+<INPUT TYPE="checkbox" ID="check1" NAME="check" Value="Red">Red<BR>
+<INPUT TYPE="checkbox" ID="check1" NAME="check" Value="Green">Green<BR>
+<INPUT TYPE="checkbox" ID="check1" NAME="check" Value="Blue">Blue<BR>
+<INPUT TYPE="checkbox" ID="check1" NAME="check" Value="None of the above">None of the above&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<INPUT TYPE="button" NAME="button" Value="Click" onClick="validateCheckBox(this.form)"><BR><BR>  
+ 
+Leave you comments:<br>
+<TEXTAREA NAME="DATA" ID="myTextarea" COLS="40" ROWS="6">
+
+</TEXTAREA>
+<INPUT TYPE="button" NAME="button" Value="Click" onClick="myText(this.form)"><BR>  
+
+</FORM>
+</head>
+
+
+<body>
+<nav>
+    <div class="topnav">
+        <a class="active" href="index.html">index</a>
+        <a href="INTEREST.HTML">INTEREST</a>
+        <a href="CONTACTME.HTML">CONTACT </a>
+        <a href="GALERY.HTML">GALERY</a>
+    </div>
+</nav>
+
+    <hr>
+
+   <h1> CONTACT US</h1> 
+   <H2> WE DELIVER EVERYWHERE</H2>
+   <img src="images/callus.png" alt="delivery logo" height="200" width="400">
+    
+   <h1  style="text-align: center;color: teal;font-family: monospace,cursive"> OUR TEAM CONTACT</h1>
+
+   <table>
+    <tr>
+        <th>CUSTOMER SERVICE</th>  
+        <th> DELIVERY MAN</th>
+        <th> STORE MANAGER</th>
+    </tr>
+    
+    <tr>
+        <td> ROGER</td>  
+        <td> LOULOU</td>
+        <td> MARTIN</td>
+     </tr>
+        
+    <tr>
+        <td>PHONE </td>  
+        <td>PHONE</td>
+        <td>PHONE</td>
+    </tr>
+        
+    <tr>
+        <td>5029991234</td>  
+        <td>5029991233</td>
+        <td>5029991222</td>
+    </tr>   
+    </table>
+</body>
+</html>

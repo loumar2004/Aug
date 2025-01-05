@@ -1,0 +1,165 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <script defer scr="script.js"></script>
+
+
+
+
+    <script>
+        var mycookies = [];
+           function setCookie()
+           {
+               mycookies["uname"] = document.getElementById("name").value;
+               mycookies["uage"] = document.getElementById("age").value;
+               document.cookie = "";
+               var cookieString = ""; 
+               for(var key in mycookies)
+                   {
+                       cookieString = key + "="+ mycookies[key] ;
+                       document.cookie = cookieString; 
+                   }
+               document.getElementById("nameOutput").innerHTML = cookieString;
+           }
+           
+           function readCookie()
+           {
+               mycookies = [];
+              var keyvalue = document.cookie.split(";");
+              for (var id in keyvalue)
+                   {
+                       var cookie = keyvalue[id].split("=");
+                       mycookies[cookie[0].trim()]=cookie[1];
+                   }
+               document.getElementById("nameOutput").value = mycookies["uname"];
+               document.getElementById("nameOutput1").value = mycookies["uage"];
+               
+           }
+       </script>
+
+
+</head>
+<body>
+
+
+    <div id="error"></div>
+    <form action="/" method="GET">
+    <div>
+       <label for="name">Name</label>
+       <input id="password" name="password" type="password">
+    </div>
+    <div>
+       <label for ="password">Password</label>
+       <input id="password" name="password" type="password">
+    </div>
+    <button type="submit">Submit</button>
+
+
+    <h3>FOOD PRICE</h3>
+
+
+    <h2>Enter Order Number </h2><input type = "text" id = 'name'>
+      
+       <input type = "button" value="Set Cookie" onclick="setCookie()">
+       <input type = "button" value="Read Cookie" onclick="readCookie()">
+       <p id="nameOutput"></p>
+       <p id="nameOutput1"></p>
+	
+	<script>
+	
+	document.write("<p>The order was last modified on "+ document.lastModified +" </p>" )
+	</script>
+
+	<script src="Externalfile.js"></script>
+	<input type="button" value="CLICK HERE TO BUY ONLINE!" onclick="message()" /> 
+    </form>
+
+    <script>
+		function bigImg(x) {
+    		x.style.height = "400px";
+  			x.style.width = "400px";
+		}
+
+		function normalImg(x) {
+			x.style.height = "200px";
+			x.style.width = "200px";
+		}
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+    <nav>
+        <div class="topnav">
+            <a class="active" href="index.html">HOME</a>
+            <a href="INTEREST.HTML">INTEREST</a>
+            <a href="CONTACTME.HTML">CONTACT </a>
+            <a href="GALERY.HTML">GALERY</a>
+        </div>
+    </nav>
+
+    <hr>
+    <h1>HOME</h1>
+   <h2> GOES RESTAURANT AND FOOD DELIVERY </h2> 
+   <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="images/banner1.jpg" alt="Flower" width="200" height="200" >
+	
+	
+   <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="images/banner2.jpg" alt="Minion" width="200" height="200">
+   
+   <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="images/banner3.jpg" alt="Flower" width="200" height="200">
+   
+
+   <hr>
+     
+      <p>The Goes opened on Thanksgiving Day 1990.</p>
+      <p> Chef / Owner Martin Goe began baking pies and selling them to restaurants and his neighbors out of a small kitchen at the corner of Hudson and North Moore St. in Tribeca</p>
+    
+    
+      
+      <p>Today, NYC’s beloved restaurant and pie shop celebrates 27 years of classic, made from scratch American cooking.</p>
+      <p>In the 17th century, going out specifically to eat a full meal was not yet commonplace. From the latter half of the 18th century, Paris became the capital of the modern restaurant. According to legend, in 1765 a man by the name of Monsieur Boulanger was the first to open an establishment offering a choice of restorative broths and even used the term ‘restaurant’ on the sign over his door: “Boulanger provides divine sustenance.” Then, in 1782, Antoine Beauvilliers opened his eponymous restaurant, which made his reputation. The famous French gastronome Brillat-Savarin praised him highly. It was one of the first luxury restaurants aimed at a wealthy clientele. With the outbreak of the French Revolution, chefs working for the aristocracy found themselves out of work. Those who escaped the guillotine opened their own restaurants to satisfy the refined tastes of their new clientele, the rising bourgeoisie.
+
+        In Switzerland, the first restaurants appeared only in 1880. In the 20th century, lifestyles changed and eating in restaurants at lunchtime became commonplace for many workers. Restaurants started to specialise and target their clientele. Eating in a restaurant in the evening began to be associated with a leisure activity combining discovery, pleasure and conviviality, an outing with family or friends away from the household dining room.
+        
+        ARON, Jean-Paul, 1974. Le Mangeur du 19e siècle. Lausanne : Ex Libris.
+        
+        FLANDRIN, Jean-Louis et MONTANARI, Massimo, 1996. Histoire de l’Alimentation. Paris : Éditions Fayard.
+        
+        RAMBOURG, Patrick, 2005. De la cuisine à la gastronomie, Histoire de la table française. Paris : Éditions Louis Audibert.
+        
+        GIRVEAU, Bruno, (dir.), 2001. À table au 19e siècle. Catalogue d’exposition du Musée d’Orsay. 4 décembre 2001- 3 mars 2002. Paris : Flammarion. 
+    </p>
+
+
+    <br>
+
+    
+    
+    <footer>
+        Copyright <br> MartinGoeRestaurant<a href="HOME.html" > click here</a>
+        </footer>
+  
+  </body>
+
+
+ 
+   <hr>
+   
+  
+  
+
+
+   <footer>   </footer>
+
+</body>
+</html>
